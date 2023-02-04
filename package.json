@@ -1,17 +1,8 @@
 {
-  "homepage": "https://omeriliski.github.io/react-final",
-  "name": "react-final-project",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "firebase": "9.9.0",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0",
-    "react-media-recorder": "^1.6.3",
-    "react-router-dom": "^6.2.2",
-    "react-scripts": "5.0.0",
-    "sass": "^1.49.9"
-  },
+  "name": "testfinal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -20,11 +11,18 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "audio-react-recorder": "^1.0.4",
+    "firebase": "9.9.0",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-media-recorder": "^1.6.3",
+    "react-router-dom": "^6.2.2",
+    "react-scripts": "5.0.0",
+    "sass": "^1.49.9"
   },
   "browserslist": {
     "production": [
