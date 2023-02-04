@@ -6,7 +6,7 @@ const DeletePost=({post})=>{
     const {database,savePostData} = useContext(PostContext);
 
     const deletePost=()=>{
-        const tempDatabase = database.filter(item=>item!=post);
+        const tempDatabase = database.filter(item=>item!==post);
         savePostData(tempDatabase)
         console.log("post deleted");
       }

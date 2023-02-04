@@ -42,7 +42,7 @@ const Navbar = () => {
       ) : null}
 
         {/* question: do we need this two buttons? */}
-      {!currentUser && location.pathname != "/login" ? (
+      {!currentUser && location.pathname !== "/login" ? (
         <NavLink to="/login" >
           <LogRegisterButton text="Anmelden"/>
         </NavLink>

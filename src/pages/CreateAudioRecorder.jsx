@@ -3,15 +3,12 @@ import { useContext, useRef, useState } from "react";
 import { PostContext } from "../App";
 import { Navigate } from "react-router-dom";
 import { getFirestore } from "firebase/firestore";
-import { getAuth } from "firebase/auth";
 import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
 import { storage } from "../firebase";
 import "./CreatePostInput.scss";
 import { ButtonPrimary, RecordButton } from "../posts/Buttons";
 
 const CreateAudio = () => {
-  const [audio, setAudio] = useState();
-  const [imageURL, setImageURL] = useState();
   const [progress, setProgress] = useState(0);
 
   const { currentUser, savePostData, database, getPostData } =

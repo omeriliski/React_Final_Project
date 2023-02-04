@@ -1,6 +1,6 @@
 import "./choose-post-type.scss";
 
-import { NavLink, Navigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Audio from "./src/Icon_Audio.svg";
 import Image from "./src/Icon_Bild.svg";
 import Playlist from "./src/Icon_Playlist.svg";

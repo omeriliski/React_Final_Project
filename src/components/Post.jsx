@@ -11,7 +11,7 @@ export function Post({post,index}) {
     const {currentUser} = useContext(PostContext)
     console.log('post.postType :>> ', post.postType);
     const moreClick=()=>{
-      if(currentUser.email==post.email){
+      if(currentUser.email===post.email){
         setShowDelete(!showDelete);
         setTimeout(() => {
           setShowDelete(false)
@@ -31,13 +31,13 @@ export function Post({post,index}) {
         </div>
         <div className="post-text-content">
           <div className="picture-wrapper">
-           {post.postType=="picture" && <img className="image-src" src={post.imgUrl} />}
-           {post.postType=="video" && <video width="320" height="240" controls>
+           {post.postType==="picture" && <img className="image-src" src={post.imgUrl} />}
+           {post.postType==="video" && <video width="320" height="240" controls>
             <source src={post.imgUrl} type="video/mp4" />
             <source src={post.imgUrl} type="video/ogg" />
             Your browser does not support the video tag.
           </video>}
-          {post.postType=="audio" && <audio src={post.audioUrl} controls />}
+          {post.postType==="audio" && <audio src={post.audioUrl} controls />}
           </div>
           <div className="txt-title">
             <p>{post.postTitle}</p>

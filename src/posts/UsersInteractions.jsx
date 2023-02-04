@@ -3,23 +3,15 @@ import { PostContext } from "../App";
 import VotingUp from "./img/votingUp.svg";
 import VotingDown from "./img/votingDown.svg";
 import ArrowDown from "./img/arrowDown.svg";
-import ArrowtsCommen from "./img/arrowComments.svg";
 import "./users-interactions.scss";
 import { SmallButton } from "./Buttons";
-import { ButtonPrimary } from "./Buttons";
 import { ButtonSecondary } from "./Buttons";
 import { useRef } from "react";
 
 
-const votingNumber = 4;
-const commentsNumber = 9;
-const userName = "Johanna";
-const userComment =
-  "Eos tempora ipsum iusto eius maxime perspiciatis voluptas magnam quidem accusamus repudiandae!.";
-
 export function UsersInteractions({post, feedback, setFeedback,index}) {
-  const defLike = post.vote.filter(item=>item.voted=="like").length;
-  const defDislike = post.vote.filter(item=>item.voted=="dislike").length;
+  const defLike = post.vote.filter(item=>item.voted==="like").length;
+  const defDislike = post.vote.filter(item=>item.voted==="dislike").length;
 
   const {currentUser,database,savePostData} = useContext(PostContext);
   const [like,setLike] = useState(defLike);
@@ -32,13 +24,13 @@ export function UsersInteractions({post, feedback, setFeedback,index}) {
     }
     //if exist give indexnumber
     console.log('object :>> ', database[index].vote.length); 
-    const findindex = database[index].vote.findIndex(item=>item.votedBy==currentUser.email);
+    const findindex = database[index].vote.findIndex(item=>item.votedBy===currentUser.email);
     // if voted doesn't exist
     if(findindex==-1)  database[index].vote.push(voteObj)
     else database[index].vote[findindex]=voteObj;
 
-    setLike(database[index].vote.filter(item=>item.voted=="like").length);
-    setDislike(database[index]?.vote?.filter(item=>item.voted=="dislike").length)
+    setLike(database[index].vote.filter(item=>item.voted==="like").length);
+    setDislike(database[index]?.vote?.filter(item=>item.voted==="dislike").length)
     savePostData(database);
   }
   // const getVoteCount=(voted)=>{
@@ -75,7 +67,7 @@ export function UserComments({ post,setShowComments,showComments }) {
 
 export function ActualComments({ comment }) {
   //question: if there is no comment what happens?
-  if(comment==undefined) return <div>no comment</div>;
+  if(comment===undefined) return <div>no comment</div>;
   else {
     return (
       <div className="actual-comment-container">

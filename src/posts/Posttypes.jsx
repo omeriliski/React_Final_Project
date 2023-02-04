@@ -24,7 +24,7 @@ savePostData(tempDatabase)
 console.log('database :>> ', database);
 }
 const moreClick=()=>{
-  if(currentUser.email==post.email){
+  if(currentUser.email===post.email){
     setShowDelete(!showDelete);
     setTimeout(() => {
       setShowDelete(false)
@@ -33,7 +33,7 @@ const moreClick=()=>{
 }
 const isAnswered = ()=>{
   if(currentUser){
-    const indexAnswer = database[index].answer.findIndex(item=>item.user==currentUser.email);
+    const indexAnswer = database[index].answer.findIndex(item=>item.user===currentUser.email);
     console.log('index :>> ', indexAnswer);
     return indexAnswer
   }
@@ -55,7 +55,7 @@ const isAnswered = ()=>{
           <p></p>
         </div>
 
-        {isAnswered() == -1 ?
+        {isAnswered() === -1 ?
         post.options.map((item) => (
           <div className="txt-title">
             <AnswerButtonSecondary handleAnswer={handleAnswer} text={item} />

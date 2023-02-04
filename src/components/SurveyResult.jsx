@@ -1,20 +1,19 @@
-import { useCallback } from "react";
-import { PostContext } from "../App";
+
 
 const SurveyResult = ({ post, currentUser }) => {
   const giveStyle = (element) => {
     console.log("element :>> ", element);
     if(currentUser) {
-      const found = post.answer.find((item) => item.user == currentUser.email);
+      const found = post.answer.find((item) => item.user === currentUser.email);
       console.log("found :>> ", found);
       const styleObj = {
         minWidth: `${
-          (post.answer.filter((item) => item.answer == element).length /
+          (post.answer.filter((item) => item.answer === element).length /
           post.answer.length) *
           90
         }%`,
       };
-      if (element == found.answer) {
+      if (element === found.answer) {
       styleObj.backgroundColor = "yellow";
       styleObj.color = "black";
     }
@@ -32,7 +31,7 @@ const SurveyResult = ({ post, currentUser }) => {
             <p className="m-8 ">{element}</p>
             <div className="answer-wrapper">
               <div className="answer-bar" style={giveStyle(element)}>
-                {post.answer.filter((item) => item.answer == element).length}
+                {post.answer.filter((item) => item.answer === element).length}
               </div>
             </div>
           </div>
