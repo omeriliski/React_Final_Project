@@ -1,0 +1,66 @@
+@import "../mixins.scss";
+
+
+.button-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 335px;
+    @include Margin8;
+    margin-top: 16px;
+
+
+
+    .button-primary {
+        @include Buttons;
+        @include YellowBg;
+        @include PostBodyText;
+        @include BlackTxt;
+
+        &:hover {
+            @include BorderDark;
+        }
+
+    }
+
+    .button-secondary {
+        @include Buttons;
+        @include PostBodyText;
+        @include WhiteTxt;
+        height: 40px;
+        border-radius: 40px;
+        @include BorderWhite;
+        box-shadow: none;
+        @include DarkBg;
+
+        &:hover {
+            border: none;
+            @include YellowBg;
+            @include BlackTxt;
+            text-decoration: none;
+        }
+    }
+}
+
+.feedback {
+    display: flex;
+
+}
+
+.button-small {
+    @include BorderWhiteR16;
+    @include CommentsButtons;
+    background: none;
+    padding-inline: 16px;
+
+    &:hover {
+        
+        cursor: pointer;
+        @include YellowTxt;
+        @include YellowBorder
+    }
+}
+
+.button-RECORD-container{
+@include Margin16;
+}

@@ -1,0 +1,82 @@
+@import "../mixins.scss";
+
+
+.d-none{
+    opacity: 0;
+}
+button{
+background-color: #2E2E2E;
+border: none;
+@include DarkBg;
+@include Margin8;
+}
+
+.form-container {
+    margin: 3rem;
+    display: flex;
+    justify-content: center;
+
+    .form-css {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 100%;
+    }
+}
+
+.input-title {
+    @include InputField;
+    resize: none;
+
+}
+
+.txt-title {
+    @include PostTitle;
+
+}
+
+
+.file-input-wrapper {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include InputField;
+    img{
+        position: absolute;
+            cursor: pointer;
+    }
+    input{
+    opacity: 0;
+    z-index: 1;
+}}
+//CREATE AUDIO COMPONENT
+.card-div{
+.audio-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+audio {
+    text-decoration: none;
+    @include DropShadow;
+    @include DarkBg;
+    @include BorderRadius32px;
+    width: 100%;
+    background-color: none;
+
+
+    }
+}
+.file-input-wrapper2{
+    @include InputField;
+    width: 300px;
+        resize: none;
+
+}
+
+.plus-img{
+    display: flex;
+    justify-content: center;
+}

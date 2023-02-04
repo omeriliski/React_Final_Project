@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap');
+
+
+// BUTTONS
+@mixin Buttons {
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            text-decoration: none;
+
+            
+            height: 40px;
+            border-radius: 40px;
+            box-shadow: none;
+            width: 100%;
+   
+}
+//COLORS:
+@mixin YellowTxt {
+    color: #FFFF00;
+}
+@mixin WhiteTxt {
+    color: white;
+}
+
+@mixin BlackTxt {
+    color: black;
+    
+}
+
+@mixin YellowBg {
+    background-color: #FFFF00;
+}
+@mixin YellowBorder {
+    border: #FFFF00 1px solid;
+}
+@mixin DarkBg {
+        background: #2E2E2E;
+}
+
+//BORDERS
+@mixin BorderWhiteR16{
+    border: white solid 1px;
+    border-radius: 16px;
+}
+
+@mixin BorderWhite {
+        border: 1px white solid;
+}
+
+@mixin BorderDark {
+        border: 1px #2E2E2E solid;
+}
+
+//PADDINGS INLINE
+@mixin Padding16px {
+padding-inline: 16px;    
+}
+@mixin Padding8px {
+padding-inline: 8px;    
+}
+
+// MARGINS Y
+@mixin Margin8 {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    
+}
+@mixin Margin16 {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    
+}
+@mixin Margin0 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    
+}
+@mixin MarginTopPage64 {
+    margin-top: 64px;
+    
+}
+
+//TYPO:
+@mixin Headline {
+    font-family: 'Manrope';
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 39px;
+    /* or 130% */
+    letter-spacing: -0.01em; 
+}
+
+@mixin typo-extras {
+    font-family: 'Manrope';
+    font-size: 12px;
+    line-height: 15px;
+}
+@mixin typo-extras-semibold {
+    font-family: 'Manrope';
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+}
+@mixin CommentsButtons {
+    //styleName: M_Comments;
+    font-family: 'Manrope';
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: white;
+
+::hover{
+@include YellowTxt()}    
+}
+
+@mixin TextLeft {
+    text-align: left;
+}
+
+@mixin PostTitle {
+    font-family: "Manrope";
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 19px;
+}
+
+@mixin PostBodyText {
+    font-family: "Manrope";
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 19px;
+}
+
+@mixin PostUserName {
+    font-family: 'Manrope';
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 19px;
+}
+
+@mixin MHeadline1 {
+    font-family: "Manrope";
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 39px;
+    /* or 130% */
+    letter-spacing: -0.01em;
+}
+
+//DROP SHADOWS
+@mixin DropShadow{
+  filter:  drop-shadow(3px 3px 8px rgba(0, 0, 0, 0.35)) drop-shadow(-3px -3px 8px rgba(100, 100, 100, 0.4));
+}
+@mixin No-Filter {
+  filter: none;    
+}
+
+//BORDERS
+@mixin BorderRadius16px {
+    border-radius: 16px;
+    
+}
+@mixin BorderRadius32px {
+    border-radius: 32px;
+    
+}
+
+
+
+/// HTML ELEMENTS TAGS
+
+@mixin InputField {
+            @include Margin8;
+            text-decoration: none;
+            @include PostBodyText;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            // width: 100%;
+            padding: 12px 16px 15px;
+            /* DM_Background_282828 */
+
+            background: #2E2E2E;
+            /* DM_NiceInnerShadow */
+
+            box-shadow: inset -3px -3px 8px rgba(100, 100, 100, 0.4),
+            inset 3px 3px 8px rgba(0, 0, 0, 0.4);
+            border-radius: 16px;
+            @include PostBodyText;
+            @include WhiteTxt;
+            }
+    

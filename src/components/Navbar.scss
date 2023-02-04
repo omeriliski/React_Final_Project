@@ -1,0 +1,63 @@
+@import "../mixins.scss";
+
+
+.header-wrapper {
+    // position: absolute;
+    //Instead of absolute i did sticky, is it better?(Ömer)
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include DarkBg;    
+    @include DropShadow;
+    z-index: 1;
+
+    // z-index: 1;
+    left: 0%;
+    // right: 0%;
+    // top: 0%;
+    top:0px;
+    height: 56px;
+    width: 100%;
+
+    .fixed-post-width{
+        width: 371px;
+        height: 100%;
+            // position: absolute;
+            //Instead of absolute i did sticky, is it better?(Ömer)
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+
+            z-index: 1;
+
+            // z-index: 1;
+            // right: 0%;
+            // top: 0%;
+
+    }
+
+    img {
+        @include Padding16px;
+        
+    }
+    .plus-for-post{
+        width: 24px;
+        // width: 100%;
+        // position: absolute;
+        // left: 292px;
+        // transform: translateX(40%)
+    }
+
+}
+
+.logout-button {
+    @include BorderWhiteR16;
+    @include BorderWhiteR16;
+    @include CommentsButtons;
+    background: none;
+    padding-inline: 16px;
+    @include BorderRadius32px;
+    height: 24px;
+}

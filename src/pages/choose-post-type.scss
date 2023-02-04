@@ -1,0 +1,36 @@
+@import "../mixins.scss";
+
+body {
+    @include MarginTopPage64;
+
+}
+
+.wrapper-grid {
+
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 16px;
+
+    .tile-card {
+        padding-top: 8px;
+        @include DarkBg;
+        height: 136px;
+        width: 136px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        @include BorderRadius16px;
+        @include DropShadow;
+
+        .card-text {
+            margin-top: 1px;
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: normal;
+            font-size: 15px;
+            line-height: 19px;
+            @include WhiteTxt;
+        }
+    }
+}

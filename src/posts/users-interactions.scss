@@ -1,0 +1,205 @@
+@import "../mixins.scss";
+
+
+.interactions-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    .voting {
+        display: flex;
+        align-items: center;
+
+    }
+
+    .typo-extras {
+        @include typo-extras;
+        @include WhiteTxt;
+        @include Padding8px
+    }
+
+
+
+}
+
+.comments-container {
+    display: block;
+    @include Margin8;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: left;
+
+    .show-comments {
+        text-align: left;
+        border: none;
+        background: none;
+        @include typo-extras;
+        @include YellowTxt;
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        align-items: flex-start;
+        display: block;
+
+
+        .arrow-down {
+            @include Padding8px;
+        }
+    }
+}
+
+.actual-comment-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: left;
+    width: 100%;
+    margin-bottom: 1rem;
+
+    .user-name {
+        @include typo-extras-semibold;
+        @include WhiteTxt;
+    }
+
+    .user-comment {
+        display: flex;
+        flex-direction: row;
+        @include TextLeft;
+        @include typo-extras;
+        @include Margin0;
+        @include WhiteTxt
+    }
+}
+
+.yellowtxt {
+    @include YellowTxt;
+}
+
+
+.interactions-overlay {
+    z-index: 1;
+    transition-duration: 4s;
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    @include DarkBg;
+    @include DropShadow;
+    @include BorderRadius16px;
+    @include Padding16px;
+    @include Margin16;
+    padding-bottom: 16px;
+    margin-bottom: 10px;
+    width: 335px;
+    position: absolute;
+    bottom: -10px;
+}
+.survey-overlay {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    @include DarkBg;
+    @include DropShadow;
+    @include BorderRadius16px;
+    @include Padding16px;
+margin-bottom: 32px;}
+
+    .answer-wrapper {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-around;
+        width: 335px;
+        height: 24px;
+        background: #2E2E2E;
+        /* DM_Inner_SmallElements */
+
+        box-shadow: inset -1px -1px 2px rgba(100, 100, 100, 0.4),
+            inset 1px 1px 2px rgba(0, 0, 0, 0.6);
+        border-radius: 16px;
+
+        .answer-bar {
+            @include BorderWhiteR16;
+            position: absolute;
+            @include Padding16px;
+        }
+    }
+
+
+.p-16 {
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.w-100 {
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+}
+
+.comment-wrapper {
+
+
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    align-items: flex-start;
+    justify-content: left;
+
+    form {
+        display: grid;
+        grid-template-columns: 4fr 1fr;
+        gap: 16px;
+
+        .input-comment {
+            height: 45px;
+            @include Margin8;
+            @include Padding8px;
+            text-decoration: none;
+            @include PostBodyText;
+            background: #2E2E2E;
+            border: none;
+            /* DM_NiceInnerShadow */
+
+            box-shadow: inset -3px -3px 8px rgba(100, 100, 100, 0.4),
+                inset 3px 3px 8px rgba(0, 0, 0, 0.4);
+            border-radius: 16px;
+            @include typo-extras;
+            @include WhiteTxt;
+        }
+
+        .button-small {
+            position: relative;
+            height: 24px;
+            width: 40px;
+            margin-top: 25%;
+
+            &:hover {
+                @include YellowBg;
+                @include BlackTxt;
+            }
+        }
+
+
+
+    }
+}
+
+.no-drop-shadow {
+    @include No-Filter;
+}
