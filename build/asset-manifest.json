@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.dc621051.css",
+    "main.js": "/static/js/main.aa1d681c.js",
+    "static/js/787.c74a058d.chunk.js": "/static/js/787.c74a058d.chunk.js",
+    "static/media/logo.svg": "/static/media/logo.2e1e2911eb149cc96b31596f6aaf6fd1.svg",
+    "static/media/votingDown.svg": "/static/media/votingDown.b679961ab761bad3f84564d006641ed6.svg",
+    "static/media/votingUp.svg": "/static/media/votingUp.e0bd4734503f414d258937d6c803fc8c.svg",
+    "static/media/Icon_Umfrage.svg": "/static/media/Icon_Umfrage.45d5a381d86f0d1314e64fd94879847b.svg",
+    "static/media/Icon_Video.svg": "/static/media/Icon_Video.b6e2bb82a9f6095f4fe7f0a52ce81a79.svg",
+    "static/media/Icon_Bild.svg": "/static/media/Icon_Bild.5a86d6ffde170df15f0455544004c06f.svg",
+    "static/media/Icon_Audio.svg": "/static/media/Icon_Audio.6a606cef911e4e6a9156295ab07248b9.svg",
+    "static/media/Icon_Txt.svg": "/static/media/Icon_Txt.75c4f8959926f1d4a5d876c5eb6b7ed9.svg",
+    "static/media/more.svg": "/static/media/more.0dd7fe1b20ce11a2d7e1d277f0b2f1c8.svg",
+    "static/media/plus.svg": "/static/media/plus.f5779dae35274d7157c51fa3f4c3456d.svg",
+    "index.html": "/index.html",
+    "static/media/Icon_Playlist.svg": "/static/media/Icon_Playlist.de20e4abce223ed95f417d6289618ab6.svg",
+    "static/media/arrowDown.svg": "/static/media/arrowDown.50240e886a390aa843a37c6b256d4376.svg",
+    "main.dc621051.css.map": "/static/css/main.dc621051.css.map",
+    "main.aa1d681c.js.map": "/static/js/main.aa1d681c.js.map",
+    "787.c74a058d.chunk.js.map": "/static/js/787.c74a058d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dc621051.css",
+    "static/js/main.aa1d681c.js"
+  ]
+}
